@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>Pre-inscripcion</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<link rel="stylesheet" href="css/preinscripcion.css">
+
+<script type="text/javascript">
+	function showContent() {
+		element = document.getElementById("next1");
+		check = document.getElementById("checkbox1");
+		if (check.checked) {
+            
+            element.style.display='inline-block';
+            
+		}
+		else {
+			element.style.display='none';
+		}
+	}
+	/*function showContent() {
+	   element = document.getElementById("content");
+	   if (check.checked) {
+	      element.style.display='block';
+	   } else {
+	      element.style.display='none';
+	   }
+  }*/
+
+  
+
+	</script>
+
+
+
+</head>
+<body translate="no">
+
+<header>
+    <div class="ancho">
+        <div class="logo">
+            <img src="img/logoblanco.png">
+        </div>
+        <nav>
+            <ul class="">
+                <li class=""><a href="index.html">Inicio</a></li>
+                <li class=""><a href="modalidades.html">Modalidades de Grados</a></li>
+                <li class="active"><a href="inscripcion.html">Pre-Inscripcion</a></li>
+                <li class=""><a href="#">Ingreso</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<form id="msform" class="formulario" onsubmit="return validar()">
+
+<ul id="progressbar">
+<li class="active">Condiciones</li>
+<li>Certificado</li>
+<li>Formulario</li>
+<li>Confirmacion</li>
+</ul>
+
+<fieldset class="formulario">
+<h2 class="fs-title">Condiciones</h2>
+
+<p>Antes de realizar la Inscripción a las modalidades de trabajo de grados de la Facultad de 
+    Ciencias Económicas y administrativas El estudiante  deberá  realizar el curso  
+    de Estrategias de información científica del departamento de  biblioteca y extensión cultural, 
+    el cual tiene duración de 20 horas y debe ser aprobado con una nota igual o superior al 80%</p>
+    <br>
+<p>Para inscribirse al curso de estrategias de información científica clic
+    <a href="https://eic.itm.edu.co/" target="_blank">Aquí</a> </p>
+    <br>
+    <div class="checkbox">
+        
+        <input type="checkbox" name="checkbox1" id="checkbox1" onchange="javascript:showContent()" value="1">
+        <label for="checkbox1"  onchange="javascript:showContent()">He realizado el curso</label>
+
+        
+    </div>
+    
+    
+        <input type="button" id="next1" name="next1" class="next1 action-button" value="Continuar" 
+        style="display: none; justify-content: space-between;" />
+    
+    
+</fieldset>
+
+<fieldset>
+<h2 class="fs-title">Certificado</h2>
+
+<p>Para poder realizar correctamente la inscripción a la 
+  modalidad de grados el estudiante debe haber realizado el curso de estrategias 
+  de información científica y haber cumplido con las 20 horas y una nota superior al 80%.</p>
+<br>
+<p>A continuación, adjunte el archivo pdf que certifica que el estudiante realizo 
+  correctamente el curso de Estrategias de información científica.</p>
+  <br>
+<!--ESTILO 7-->
+<input type="file" name="file-7" id="file-7" class="inputfile inputfile-7" data-multiple-caption="{count} archivos seleccionados" multiple required />
+<label for="file-7">
+<span class="iborrainputfile"></span>
+<strong>
+<svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+Seleccionar archivo
+</strong>
+</label>
+<br>
+<input type="button" name="previous" class="previous action-button" value="Atras" />
+<input type="button"  id="subira" name="subira" class="next2 action-button" value="Continuar"/>
+</fieldset>
+
+
+<fieldset>
+  
+  <h2 class="fs-title2">Formulario</h2>
+  
+<div class="datos">
+  <input class="nombre" type="text"  id="nomb" name="nomb" placeholder="NOMBRES"  required/>
+  <input class="apellido" type="text" id="apelli" name="apelli" placeholder="APELLIDOS"  required/>
+</div>
+
+
+<div class="datos">
+  
+  <select  class="tipo" name="tipo" id="tipo" class="form-control" required>
+    <option  value="T.I.">T.I.</option>
+    <option selected="selected" value="C.C.">C.C.</option>
+    <option value="C.E.">C.E.</option>
+    <option value="Pasaporte">Pasaporte</option>
+    <option value="Otro">Otro</option>
+  
+  </select>
+  <input  class="document" type="text"  id="documento" name="documento" placeholder="DOCUMENTO"  required />
+  
+</div>
+
+<div class="datos">
+  <input  class="correo" type="text"  id="ema" name="ema" placeholder="CORREO INSITUCIONAL" required  />
+<input  class="celul" type="tel"   maxlength = "10"  id="celular" name="celular" placeholder="MÓVIL" required />
+</div>
+
+<div class="datos">
+  <select  class="tipo2" name="carrera" id="carrera" class="form-control" required>
+    <option selected="selected" value="Opn">Seleccionar Programa</option>
+    <option  value="Tcyp">Tecnología en análisis de costos y presupuestos</option>
+    <option  value="Cp">Contaduría publica</option>
+    <option value="Ic">Ingeniería de calidad</option>
+    <option value="Tga">Tecnología en gestión administrativa</option>
+    <option value="If">Ingeniería financiera</option>
+    <option value="Tcc">Tecnología en control de la calidad</option>
+    <option value="Tsp">Tecnología en sistemas de producción</option>
+    <option value="Ip">Ingeniería de producción</option>
+    <option value="At">Administración tecnológica</option>
+    
+  
+  </select>
+
+  <select  class="tipo3" name="modalidad" id="modalidad" class="form-control" required>
+    <option selected="selected" value="Op">Seleccionar Modalidad</option>
+    <option  value="Pp">Práctica profesional</option>
+    <option  value="Rl">Reconocimiento laboral</option>
+    <option value="Ie">Intervención empresarial</option>
+    <option value="Em">Emprendimiento</option>
+    <option value="Pi">Participación en investigación</option>
+    <option value="Tl">Talleres o laboratorios</option>
+    <option value="Sp">Seminario de profundización</option>
+    <option value="Pg">Proyecto de grado</option>
+    <option value="Cpo">Cursos de postgrado</option>
+  </select>
+</div>
+
+
+
+
+
+
+<input type="button" name="previous" class="previous action-button" value="Previous" style="margin-right: 40px !important;
+  "/>
+<input type="button"  id="gu" name="gu" class="next action-button" value="Continuar"/>
+</fieldset>
+
+<fieldset>
+  <p>Lorem ipsum dolor sit.</p>
+</fieldset>
+
+</form>
+
+<script src="js/custom-file-input.js"></script>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script id="rendered-js">
+
+
+
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating, no, ap, tpt, doc, cart, modt ,te; 
+var ema;//flag to prevent quick multi-click glitches
+
+
+
+window.onload=function(){
+  var btn=document.getElementById("subira");
+  var bt=document.getElementById("gu");
+ bt.onclick=function(){
+   no=document.getElementById("nomb").value
+   ap=document.getElementById("apelli").value;
+
+   tp=document.getElementById("tipo");
+   tpt=tp.options[tp.selectedIndex].innerText;
+   doc=document.getElementById("documento").value;
+
+   car=document.getElementById("carrera");
+   cart=car.options[car.selectedIndex].innerText;
+
+   mod=document.getElementById("modalidad");
+   modt=mod.options[mod.selectedIndex].innerText;
+
+   te=document.getElementById("celular").value;
+   emai=document.getElementById("ema").value;
+
+   
+   if(no ===""){
+     alert("El campo Nombre está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(ap ===""){
+    alert("El campo Apellido está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(doc === ""){
+    alert("El campo Documento está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(cart === "Seleccionar Programa"){
+    alert("El campo del Programa está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(modt === "Seleccionar Modalidad"){
+    alert("El campo de la modalidad está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(te === ""){
+    alert("El campo del telefono está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else if(emai === ""){
+    alert("El campo del correo está vacío. Recuerde que toda la información es necesaria para realizar correctamente la Pre-Inscripcion");
+   }
+   else{
+     alert("Estudiante: "+no+" "+ap+" Con: "+tpt+" "+doc+" Ha quedado pre-inscrito a la modalidad de trabajo de grados: "+modt+
+     " de la carrera: "+cart+" la informacion completa se le enviara al correo registrado: "+emai);
+   }
+ }
+
+
+  btn.onclick=function(){
+    var archi=document.getElementById("file-7").files;
+    if(archi.length==0)
+    {
+      alert("Para continuar con la Pre-Inscripción dede adjuntar el certificado del curso realizado  de estrategias de informacón cientifica en formato pdf. ");
+      
+    }
+    else{
+      
+  if (animating) return false;
+  animating = true;
+
+  current_fs = $(this).parent();
+  next_fs = $(this).parent().next();
+
+  //activate next step on progressbar using the index of next_fs
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+  //show the next fieldset
+  next_fs.show();
+  //hide the current fieldset with style
+  current_fs.animate({ opacity: 0 }, {
+    step: function (now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
+      scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
+      left = now * 50 + "%";
+      //3. increase opacity of next_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({
+        'transform': 'scale(' + scale + ')',
+        'position': 'absolute' });
+
+      next_fs.css({ 'left': left, 'opacity': opacity });
+    },
+    duration: 800,
+    complete: function () {
+      current_fs.hide();
+      animating = false;
+    },
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack' });
+
+
+    }
+  }
+}
+
+
+$(".next1").click(function () {
+  if (animating) return false;
+  animating = true;
+
+  current_fs = $(this).parent();
+  next_fs = $(this).parent().next();
+
+  //activate next step on progressbar using the index of next_fs
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+  //show the next fieldset
+  next_fs.show();
+  //hide the current fieldset with style
+  current_fs.animate({ opacity: 0 }, {
+    step: function (now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
+      scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
+      left = now * 50 + "%";
+      //3. increase opacity of next_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({
+        'transform': 'scale(' + scale + ')',
+        'position': 'absolute' });
+
+      next_fs.css({ 'left': left, 'opacity': opacity });
+    },
+    duration: 800,
+    complete: function () {
+      current_fs.hide();
+      animating = false;
+    },
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack' });
+
+});
+
+$(".previous").click(function () {
+  if (animating) return false;
+  animating = true;
+
+  current_fs = $(this).parent();
+  previous_fs = $(this).parent().prev();
+
+  //de-activate current step on progressbar
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+  //show the previous fieldset
+  previous_fs.show();
+  //hide the current fieldset with style
+  current_fs.animate({ opacity: 0 }, {
+    step: function (now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale previous_fs from 80% to 100%
+      scale = 0.8 + (1 - now) * 0.2;
+      //2. take current_fs to the right(50%) - from 0%
+      left = (1 - now) * 50 + "%";
+      //3. increase opacity of previous_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({ 'left': left });
+      previous_fs.css({ 'transform': 'scale(' + scale + ')', 'opacity': opacity });
+    },
+    duration: 800,
+    complete: function () {
+      current_fs.hide();
+      animating = false;
+    },
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack' });
+
+});
+
+$(".submit").click(function () {
+  
+ return false;
+});
+//# sourceURL=pen.js
+
+
+
+
+</script>
+
+
+  
+</body>
+</html>
